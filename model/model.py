@@ -359,7 +359,6 @@ print('---------------------------------------------------\nStarted ...')
 # create_vocab(df.iloc[:, 2])
 
 ## Training section ##
-'''
 is_initial = None
 try :
     torch.load('LSTM.pth')
@@ -374,7 +373,6 @@ testing_phase(25000)
 
 # End and save
 end_epoch()
-'''
 
 '''
 # Run the following to create a plot of testing accuarcy and f1 scores
@@ -390,5 +388,7 @@ plt.savefig('../graphs/training_epochs.png')
 '''
 
 # Testing model prediction in production
+'''
 reviews = ['I think the design is old, boring and bland. as for the products, they have changed immensely', 'the hotel was great and the beach was perfect. The location is close to all of the best five start restaurants. however, they served very little amounts of food for breakfast']
 predict_production(reviews)
+'''
