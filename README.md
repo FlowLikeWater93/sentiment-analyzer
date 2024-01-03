@@ -10,6 +10,9 @@ Building a reputable and popular brand is not an easy job. In order to do so, bu
 ### Goal of this project:
 Build a sentiment analysis model that using LSTMs that can label text input as positive or negative
 
+### Project results
+Please read my full blogpost about this project <a href="https://medium.com/p/90926faea453#7f40-e14549073b86" target="blank">here</a> 
+
 ## Running the project files
 1- analysis.py :
 <br>reads and analyzes the dataset yelp_academic_dataset_review.json. can save graphs in graphs directory
