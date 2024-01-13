@@ -34,6 +34,16 @@ Navigate to the "model" directory and run the following command
 ```
 python model.py
 ```
+<br>
+3- predict.py :
+<br>This file allows users to interact with the model. Run the file and enter input text for the model to label 
+<br><br>
+Navigate to the "model" directory and run the following command
+<br><br>
+
+```
+python predict.py
+```
 <br><br>
 
 ## Installations
@@ -132,6 +142,10 @@ LSTM class. specifies model hyper parameters
 **model/model.py**
 <br>
 Run the file to train the model on the dataset yelp_academic_dataset_review.json
+<br>
+**model/predict.py**
+<br>
+Run the file to test the model with your own test input
 <br>
 **model/vocab.pth**
 <br>
