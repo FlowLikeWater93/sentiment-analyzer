@@ -333,23 +333,6 @@ def end_epoch():
     print(torch.load('epoch_metrics.pth'))
 
 
-
-def predict_production(reviews, max_words=100):
-    reviews_tokens = [vocab(tokenizer(text)) for text in reviews]
-    reviews_tokens = [tokens+([0]* (max_words-len(tokens))) if len(tokens)<max_words else tokens[:max_words] for tokens in reviews_tokens]
-    X = torch.tensor(reviews_tokens, dtype=torch.int32)
-
-    _, _, model, _ = load_model(False)
-
-    with torch.no_grad():
-        preds = model(X)
-        preds_classes = preds.round().numpy()
-        classes = ['Negative', 'Positive']
-        for i in range(len(reviews)):
-            print('{}- {} : {}'.format(i+1, reviews[i], classes[int(preds_classes[i][0])]))
-
-
-
 ##################################################
 print('---------------------------------------------------\nStarted ...')
 
@@ -385,10 +368,4 @@ plt.xlabel("epoch")
 plt.ylabel("validation metrics")
 plt.xticks([0, 1, 2, 3, 4])
 plt.savefig('../graphs/training_epochs.png')
-'''
-
-# Testing model prediction in production
-'''
-reviews = ['I think the design is old, boring and bland. as for the products, they have changed immensely', 'the hotel was great and the beach was perfect. The location is close to all of the best five start restaurants. however, they served very little amounts of food for breakfast']
-predict_production(reviews)
 '''
